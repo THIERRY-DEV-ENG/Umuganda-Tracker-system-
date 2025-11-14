@@ -1,6 +1,12 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "umuganda");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+$host = "sql108.infinityfree.com"; 
+$user = "if0_40417092";
+$pass = "Zitigate52030";
+$dbname = "if0_40417092_umuganda";
+
+$conn = mysqli_connect($host, $user, $pass, $dbname);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>
